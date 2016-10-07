@@ -1,0 +1,36 @@
+0. 탐색기를 열고 git관련 폴더를 모두 지운다.
+
+1. Git Bash에서 폴더 git-projectA를 만든다.
+  mkdir git-projectA
+2. git-projectA 폴더에서  https://github.com/자신의ID/homework3 를 복제한다.
+  cd git-projectA
+  git clone https://github.com/dmdoa12/homework3
+3. 로컬 Repository에서 B04를 생성하여 add/commit을 한다.
+  touch B04.java
+  git add B04.java
+  git commit -m "B04 생성"
+4. 원격으로 push를 한다.
+  git push
+5. 원격에서 수정하여 다음 프로그램을 만든다.
+========================================
+연봉을 숫자로 입력받은후, 소득세를 출력한.
+연 봉 1천 만 원 미 만 : 연 봉 의 9.5%
+연 봉 1천 만 원 이 상 ~ 4천 만 원 미 만 : 연 봉 의 19%
+연 봉 4천 만 원 이 상 ~ 8천 만 원 미 만 : 연 봉 의 28%
+연 봉 8천 만 원 이 상 : 연 봉 의 37%
+=====================================
+ex)
+연봉을 원단위로 입력하세요 25000000
+연봉 금액에 대한 소득세는 4750000입니다.
+
+6. 로컬에서 원격의 정보사항을 받아온다.(fetch)
+	git fetch https://github.com/dmdoa12/homework3
+7. 로컬브랜치와 원격 받아온 브랜치를 merge한 후 받아온 소스를 컴파일한다.
+	git merge origin master
+8. 에러가 발생한다면 수정한 후 add/commit을 한다.
+	git commit -am "오류 수정"
+9. 복제하기 위핸 연결된 원격 연결을 끊는다.
+	git remote rm origin
+10. 원격 연결을 apple이란 이름으로 새로 연결한 후 완성된 프로그램을 push한다.
+	git remote apple https://github.com/dmdoa12/homework3
+	git push
