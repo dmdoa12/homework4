@@ -6,8 +6,9 @@ public class ExamForWhile {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
+		String check="";
 		try{
-			while(true){
+			while(!check.equals("end")){
 				System.out.print("원하는 메뉴는:");
 				int menu = s.nextInt();
 				switch(menu){
@@ -24,6 +25,7 @@ public class ExamForWhile {
 					new GuGuDan().dan();
 					break;
 				case 6:
+					check="end";
 					break;
 				default:
 					System.out.print("잘못 입력하셨습니다.\n");
@@ -34,6 +36,7 @@ public class ExamForWhile {
 		finally{
 			if(s!=null)
 				s.close();
+			System.out.println("프로그램 종료");
 		}
 	}
 }
